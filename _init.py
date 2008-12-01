@@ -9,10 +9,10 @@ import re
 def mapUrlToJxpFile(uri, request, response):
 	
     if( uri.match(re.compile("^/assets/") )):
-        return null
+        return None
 
     if ( uri.match(re.compile("^/favicon\.ico/"))):
-        return null
+        return None
 
 
     # otherwise, just always return our "controller"

@@ -1,8 +1,12 @@
 from _10gen import db, local
 
 data = db.count.findOne()
-if ( data is None ): 
-   data = { 'count':0 }
+if ( data == None ): 
+    class foo(object):
+        pass
+    data = foo()
+    data.count = 0
+
 
 data.count +=1
 db.count.save(data)
